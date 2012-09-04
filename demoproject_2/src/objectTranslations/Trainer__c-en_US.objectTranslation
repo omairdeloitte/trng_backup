@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trainer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trainers</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enter the certifications the trainer has --></help>
+        <label><!-- Certifications --></label>
+        <name>Certifications__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the date of joining of the practioner. --></help>
+        <label><!-- Date Of Joining --></label>
+        <name>Date_Of_Joining__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the email ID of the practioner --></help>
+        <label><!-- Email ID --></label>
+        <name>Email_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Employee ID of the practitioner (6 digit) --></help>
+        <label><!-- EmpId --></label>
+        <name>EmpId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the experience details of the practitioner. --></help>
+        <label><!-- Experience --></label>
+        <name>Experience__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Primary Skills the Practitioner has. --></help>
+        <label><!-- Primary Skill --></label>
+        <name>Primary_Skill__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecType --></label>
+        <name>RecType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Secondary Skills the practitioner has. --></help>
+        <label><!-- Secondary Skill --></label>
+        <name>Secondary_Skill__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the number of sessions allotted to the trainer --></help>
+        <label><!-- Sessions Allotted --></label>
+        <name>Sessions_Allotted__c</name>
+    </fields>
+    <layouts>
+        <layout>Facultylablayout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Practitioner Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>mentor</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Faculty --></label>
+        <name>Faculty</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lab --></label>
+        <name>Lab</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Mentor --></label>
+        <name>Mentor</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- DOJ cannot be greater than Today!! --></errorMessage>
+        <name>DOJ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- DOJ cannot be a date after today! --></errorMessage>
+        <name>Date_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

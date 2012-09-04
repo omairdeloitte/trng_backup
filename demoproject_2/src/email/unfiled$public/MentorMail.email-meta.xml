@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used to send mail to the mentor informing him of the scores of his mentee</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MentorMail</name>
+    <style>none</style>
+    <subject>Information about Your Mentee!</subject>
+    <textOnly>Hello,
+
+This is to inform you about the performance of your mentee.The scores along with the adjudged strength and weakness of your mentee has been included . The information is as follows :
+
+Mentor Name :{!Trainee__c.Mentor_Name__c}
+Trainee Name :{!Trainee__c.Name}
+Trainee Designation :{!Trainee__c.Designation__c}
+Maximum marks of today&apos;s test :{!Score__c.Maximum_Score__c}
+Marks Scored in todays test :{!Score__c.Marks_Scored__c}
+Maximum Overall Score of previous tests:{!Trainee__c.Max_Overall_Score__c}
+Overall Score in previous tests :{!Trainee__c.Overall_Score__c}
+Final Quiz marks:{!Score__c.Final_Quiz__c}
+Strengths : {!Score__c.Strengths__c}
+Development Needs: {!Score__c.Development_Needs__c}
+Overall Comments :{!Score__c.Overall_comments__c}</textOnly>
+    <type>custom</type>
+</EmailTemplate>

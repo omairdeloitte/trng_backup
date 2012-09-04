@@ -1,0 +1,8 @@
+<apex:page standardController="Day__c" >
+ <p/>
+    <apex:form >
+        <apex:inputField value="{!Day__c.name}"/> <p/>
+        <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+    </apex:form>
+</apex:page>

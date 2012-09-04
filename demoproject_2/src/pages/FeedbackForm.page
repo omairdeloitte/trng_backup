@@ -1,0 +1,27 @@
+<apex:page controller="FeedbackController" showHeader="false" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1 style="color:red;margin-left:750px;font-size:35px;"> Feedback Form</h1>
+    <apex:pageBlock >
+<apex:pagemessages ></apex:pagemessages>
+       <apex:form >
+        <apex:pageBlockSection title="Your feedback is valuable to us!!">
+        <apex:inputText label="Feedback Code" required="true" value="{!SessionId}" id="i1"/>      
+<h1 style="color:red;font-size:15px;">(Provided by your trainer eg S-XXXX)</h1>
+        <apex:inputTextarea label="What you like?" value="{!t1}"/><br/>
+        <apex:inputTextarea label="What can be improved?" value="{!t2}"/> <br/>
+        <apex:inputTextarea label="Overall Comments" value="{!t3}"/> <br/>
+        <apex:commandButton value="Save" action="{!savef}" onclick="alert1()"/>
+        <apex:commandButton value="Cancel" action="{!cancel}" />
+        </apex:pageBlockSection>
+       </apex:form>
+    </apex:pageBlock>
+      <script>
+      function alert1()
+      {
+      var v='Thank You for your feedback!!';
+      alert(v);
+      }
+     
+  </script>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

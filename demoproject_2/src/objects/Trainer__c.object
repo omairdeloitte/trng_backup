@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Certifications__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the certifications the trainer has</inlineHelpText>
+        <label>Certifications</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Date_Of_Joining__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date of joining of the practioner.</inlineHelpText>
+        <label>Date Of Joining</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Email_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the email ID of the practioner</inlineHelpText>
+        <label>Email ID</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>EmpId__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Employee ID of the practitioner (6 digit)</inlineHelpText>
+        <label>EmpId</label>
+        <precision>6</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Experience__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the experience details of the practitioner.</inlineHelpText>
+        <label>Experience</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Skill__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Primary Skills the Practitioner has.</inlineHelpText>
+        <label>Primary Skill</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>RecType__c</fullName>
+        <externalId>false</externalId>
+        <formula>$RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RecType</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secondary_Skill__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Secondary Skills the practitioner has.</inlineHelpText>
+        <label>Secondary Skill</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sessions_Allotted__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the number of sessions allotted to the trainer</inlineHelpText>
+        <label>Sessions Allotted</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Trainer</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>EmpId__c</columns>
+        <columns>NAME</columns>
+        <columns>Sessions_Allotted__c</columns>
+        <columns>Certifications__c</columns>
+        <columns>Experience__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Mentor_View</fullName>
+        <columns>NAME</columns>
+        <columns>Date_Of_Joining__c</columns>
+        <columns>RecType__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>RecType__c</field>
+            <operation>equals</operation>
+            <value>Mentor</value>
+        </filters>
+        <label>MentorView</label>
+    </listViews>
+    <nameField>
+        <label>Trainer Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Trainers</pluralLabel>
+    <recordTypes>
+        <fullName>Faculty</fullName>
+        <active>true</active>
+        <description>Allot for Theory Sessions</description>
+        <label>Faculty</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Lab</fullName>
+        <active>true</active>
+        <description>Allot for Lab Sessions</description>
+        <label>Lab</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Mentor</fullName>
+        <active>true</active>
+        <description>Allot for Guidance and Councelling</description>
+        <label>Mentor</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>DOJ</fullName>
+        <active>true</active>
+        <errorConditionFormula>Date_Of_Joining__c &gt; TODAY()</errorConditionFormula>
+        <errorMessage>DOJ cannot be greater than Today!!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Date_Validation</fullName>
+        <active>true</active>
+        <description>DOJ of trainer cannot be greater than today</description>
+        <errorConditionFormula>Date_Of_Joining__c &gt; TODAY()</errorConditionFormula>
+        <errorDisplayField>Certifications__c</errorDisplayField>
+        <errorMessage>DOJ cannot be a date after today!</errorMessage>
+    </validationRules>
+</CustomObject>

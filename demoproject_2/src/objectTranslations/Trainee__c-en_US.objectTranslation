@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trainee</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trainees</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enter the designation of the trainee --></help>
+        <label><!-- Designation --></label>
+        <name>Designation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the email id of the trainee --></help>
+        <label><!-- Email ID --></label>
+        <name>Email_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Employee ID for the trainee --></help>
+        <label><!-- EmpID --></label>
+        <name>EmpID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Overall Score --></label>
+        <name>Max_Overall_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the name of the mentor who has been assigned for the trainee. --></help>
+        <label><!-- Mentor Name --></label>
+        <name>Mentor_Name__c</name>
+        <picklistValues>
+            <masterLabel>Akanksha Gupta</masterLabel>
+            <translation><!-- Akanksha Gupta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deepak Vinod</masterLabel>
+            <translation><!-- Deepak Vinod --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Omair Akram</masterLabel>
+            <translation><!-- Omair Akram --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This is a read only field which gets automatically populated as the trainee takes the daily tests. --></help>
+        <label><!-- Overall Score --></label>
+        <name>Overall_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the service line of the trainee. --></help>
+        <label><!-- Service_Line --></label>
+        <name>Service_Line__c</name>
+    </fields>
+    <layouts>
+        <layout>Trainee Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Development_Needs__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the areas of improvement for the trainee.</inlineHelpText>
+        <label>Development Needs</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Final_Quiz__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Final Quiz marks ONLY for the final quiz that will happen on last day of training.</inlineHelpText>
+        <label>Final Quiz Marks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Marks_Scored__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the marks stored by the trainee.</inlineHelpText>
+        <label>Marks Scored</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Maximum_Score__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the maximum marks for the test.</inlineHelpText>
+        <label>Maximum Marks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overall_comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the overall comments for the trainee.</inlineHelpText>
+        <label>Overall comments</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Session__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Session</label>
+        <referenceTo>Session__c</referenceTo>
+        <relationshipLabel>Scores</relationshipLabel>
+        <relationshipName>Scores</relationshipName>
+        <required>true</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Strengths__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the strengths of the trainee.</inlineHelpText>
+        <label>Strengths</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Trainee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the trainee for whom the scores are being written.</inlineHelpText>
+        <label>Trainee</label>
+        <referenceTo>Trainee__c</referenceTo>
+        <relationshipLabel>Scores</relationshipLabel>
+        <relationshipName>Scores</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Score</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Trainee__c</columns>
+        <columns>Marks_Scored__c</columns>
+        <columns>Maximum_Score__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>S-{0000}</displayFormat>
+        <label>ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Scores</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>FinalQuizInput</fullName>
+        <active>false</active>
+        <errorConditionFormula>!(Session__r.Day__r.Date__c = Session__r.Day__r.Training_Plan__r.End_Date__c)</errorConditionFormula>
+        <errorMessage>Final Quiz Marks can be entered only for the last day of the training plan!!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FinalQuizMarks</fullName>
+        <active>true</active>
+        <errorConditionFormula>Final_Quiz__c &gt;100</errorConditionFormula>
+        <errorMessage>Quiz Marks cannot be greater than 100</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MarksScoredlessthanMaxMarks</fullName>
+        <active>true</active>
+        <errorConditionFormula>Marks_Scored__c  &gt;  Maximum_Score__c</errorConditionFormula>
+        <errorMessage>Marks Scored can&apos;t be greater than Maximum Marks</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MaximumScorelessthan100</fullName>
+        <active>true</active>
+        <errorConditionFormula>Maximum_Score__c   &gt;  100</errorConditionFormula>
+        <errorMessage>Maximum Score cannot be greater than 100.</errorMessage>
+    </validationRules>
+</CustomObject>

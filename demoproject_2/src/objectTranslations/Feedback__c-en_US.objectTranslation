@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Feedback</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Feedback</value>
+    </caseValues>
+    <fields>
+        <label><!-- Improvements Needed --></label>
+        <name>Improvements_Needed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overall Comments --></label>
+        <name>Overall_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session_ID --></label>
+        <name>Session_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session --></label>
+        <name>Session__c</name>
+        <relationshipLabel><!-- Feedback --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- What did you like --></label>
+        <name>What_was_the_session_like__c</name>
+    </fields>
+    <layouts>
+        <layout>Feedback Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

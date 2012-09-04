@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Designation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the designation of the trainee</inlineHelpText>
+        <label>Designation</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the email id of the trainee</inlineHelpText>
+        <label>Email ID</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>EmpID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Employee ID for the trainee</inlineHelpText>
+        <label>EmpID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Overall_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Overall Score</label>
+        <summarizedField>Score__c.Maximum_Score__c</summarizedField>
+        <summaryForeignKey>Score__c.Trainee__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Mentor_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the mentor who has been assigned for the trainee.</inlineHelpText>
+        <label>Mentor Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Akanksha Gupta</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Omair Akram</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deepak Vinod</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Overall_Score__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a read only field which gets automatically populated as the trainee takes the daily tests.</inlineHelpText>
+        <label>Overall Score</label>
+        <summarizedField>Score__c.Marks_Scored__c</summarizedField>
+        <summaryForeignKey>Score__c.Trainee__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Service_Line__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the service line of the trainee.</inlineHelpText>
+        <label>Service_Line</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Trainee</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Service_Line__c</columns>
+        <columns>Designation__c</columns>
+        <columns>Mentor_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Trainee Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Trainees</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

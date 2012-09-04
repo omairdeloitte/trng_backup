@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Day</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Days</value>
+    </caseValues>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Training Plan --></label>
+        <name>Training_Plan__c</name>
+        <relationshipLabel><!-- Days --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- This date should be between Training Plan Scheduled Dates!! --></errorMessage>
+        <name>Date_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

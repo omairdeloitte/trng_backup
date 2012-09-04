@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Score</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Scores</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enter the areas of improvement for the trainee. --></help>
+        <label><!-- Development Needs --></label>
+        <name>Development_Needs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Final Quiz marks ONLY for the final quiz that will happen on last day of training. --></help>
+        <label><!-- Final Quiz Marks --></label>
+        <name>Final_Quiz__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the marks stored by the trainee. --></help>
+        <label><!-- Marks Scored --></label>
+        <name>Marks_Scored__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the maximum marks for the test. --></help>
+        <label><!-- Maximum Marks --></label>
+        <name>Maximum_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the overall comments for the trainee. --></help>
+        <label><!-- Overall comments --></label>
+        <name>Overall_comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session --></label>
+        <name>Session__c</name>
+        <relationshipLabel><!-- Scores --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter the strengths of the trainee. --></help>
+        <label><!-- Strengths --></label>
+        <name>Strengths__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose the trainee for whom the scores are being written. --></help>
+        <label><!-- Trainee --></label>
+        <name>Trainee__c</name>
+        <relationshipLabel><!-- Scores --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Score Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Final Quiz Marks can be entered only for the last day of the training plan!! --></errorMessage>
+        <name>FinalQuizInput</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quiz Marks cannot be greater than 100 --></errorMessage>
+        <name>FinalQuizMarks</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Marks Scored can&apos;t be greater than Maximum Marks --></errorMessage>
+        <name>MarksScoredlessthanMaxMarks</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Maximum Score cannot be greater than 100. --></errorMessage>
+        <name>MaximumScorelessthan100</name>
+    </validationRules>
+</CustomObjectTranslation>

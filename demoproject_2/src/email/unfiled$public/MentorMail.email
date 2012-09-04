@@ -1,0 +1,14 @@
+Hello,<br/>
+ <p> This is to inform you about the performance of your mentee.The scores along with the adjudged strength and weakness of your mentee has been included . The information is as follows :</p>
+
+<b>Mentor Name :</b>{!Trainee__c.Mentor_Name__c}<br/>
+<b>Trainee Name :</b>{!Trainee__c.Name}<br/>
+<b>Trainee Designation :</b>{!Trainee__c.Designation__c}<br/>
+<b>Maximum marks of today's test :</b>{!Score__c.Maximum_Score__c}<br/>
+<b>Marks Scored in todays test :</b>{!Score__c.Marks_Scored__c}<br/>
+<b>Maximum Overall Score of previous tests:</b>{!Trainee__c.Max_Overall_Score__c}<br/>
+<b>Overall Score in previous tests :</b>{!Trainee__c.Overall_Score__c}<br/>
+<b> Final Quiz marks:</b>{!Score__c.Final_Quiz__c}<br/>
+<b>Strengths : </b>{!Score__c.Strengths__c}<br/>
+<b>Development Needs:</b> {!Score__c.Development_Needs__c}<br/>
+<b>Overall Comments :</b>{!Score__c.Overall_comments__c}<br/>
