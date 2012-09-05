@@ -3,6 +3,7 @@ trigger chkPTO on Session__c (before insert) {
 //commit2byomair
 //commit3byomair
 //commit4omair
+//commit5
 session__c s = new session__c();
  s= trigger.new[0];
  if(s.trainer__c!=NULL){
